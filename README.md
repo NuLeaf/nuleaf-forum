@@ -1,0 +1,4 @@
+# NuLEAF Technology Forum
+This repository includes the customizable code of the [NuLEAF Technology Website's Forum](http://nuleaftech.com/forum/). Since the forum [software we are using](https://www.phpbb.com/) is fully functional outside of the box, the only files included here involve basic forum layout, the forum's templates, and also the forum's stylesheets.
+
+If you are a NuLEAF Technologies CS intern and want to contribute, contact your team leader and also read through the [wiki](https://github.com/NuLeaf/nuleaf-website/wiki) for general steps on contributing. If you are *not* an intern but would like to apply, drop us an email at <nuleaftechnologies@gmail.com>. While this repository is open-source, pull requests from those who are not NuLEAF interns will be ignored. We do eagerly accept and fix issues, however.
