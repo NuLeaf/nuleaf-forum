@@ -442,7 +442,7 @@ table.table1 tbody .big-column td {
 
 .postprofile .avatar {
 	background: none;
-	background: url("./images/avatar-tr.png") 100% 0 no-repeat, url("./images/avatar-bl.png") 0 100% no-repeat;
+	background: url("./images/avatar-tr-mvp.png") 100% 0 no-repeat, url("./images/avatar-bl-mvp.png") 0 100% no-repeat;
 	margin-top: 5px;
 	padding: 5px;
 }
@@ -452,7 +452,7 @@ table.table1 tbody .big-column td {
 }
 
 .postprofile .avatar img {
-	border: 1px solid rgba(0,152,245,0.7);
+	border: 1px solid rgba(58,197,26,0.7);
 	border-radius: 4px;
 	height: auto;
 	width: auto;
