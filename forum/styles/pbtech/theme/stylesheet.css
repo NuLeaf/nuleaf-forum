@@ -145,7 +145,7 @@ h2 a { color: #077932; }
 h2 a:hover { color: #02ee5b; }
 
 .content h2, .panel h2 {
-	color: #077932;
+	color: #000000;
 	background: none;
 	border-bottom-color: #33c87b;
 }
@@ -1025,7 +1025,7 @@ input.button1:active, input.button3:active, input.button2:active {
 --------------------------------------------- */
 #qr_postform .panel {
 	background: none;
-	background: linear-gradient(rgba(177,177,177,1), rgba(200,200,200,0));
+	background: linear-gradient(rgba(140,198,63,1), rgba(200,200,200,0));
 	border: none;
 	box-shadow: none;
 	margin: 0;
