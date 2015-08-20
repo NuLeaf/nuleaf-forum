@@ -7,7 +7,7 @@
  */
 
 (function($) {
-  var $sectionBox = $('li.row');
+  var $sectionBox = $('li.row.forum-section');
   $sectionBox.css('cursor', 'pointer');
   $sectionBox.click(function() {
     window.location = $(this).find('a.forumtitle').attr('href');
