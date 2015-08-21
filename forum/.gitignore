@@ -1,4 +1,4 @@
-###Linux###
+########## Linux
 
 *~
 
@@ -6,7 +6,7 @@
 .directory
 
 
-###OSX###
+########## OSX
 
 .DS_Store
 .AppleDouble
@@ -31,7 +31,7 @@ Temporary Items
 .apdisk
 
 
-###Windows###
+########## Windows
 
 # Windows image file caches
 Thumbs.db
@@ -53,7 +53,7 @@ $RECYCLE.BIN/
 *.lnk
 
 
-###SublimeText###
+########## SublimeText
 
 # cache files for sublime text
 *.tmlanguage.cache
@@ -71,7 +71,7 @@ $RECYCLE.BIN/
 sftp-config.json
 
 
-###phpBB files not needed###
+########## phpBB files not needed
 config.php
 adm/
 bin/
