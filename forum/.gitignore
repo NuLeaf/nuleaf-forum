@@ -84,6 +84,7 @@ sftp-config.json
 /install_old/*
 /install/schemas/schema.json
 /language/*
+/phpbb/*
 /store/*
 /images/avatars/gallery/*
 /images/avatars/upload/*
