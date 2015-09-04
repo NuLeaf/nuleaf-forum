@@ -88,3 +88,4 @@ sftp-config.json
 /images/avatars/gallery/*
 /images/avatars/upload/*
 /images/ranks/*
+/vendor/*
