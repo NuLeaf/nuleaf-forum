@@ -72,15 +72,19 @@ sftp-config.json
 
 
 ########## phpBB files not needed
-config.php
-adm/
-bin/
-cache/
-config/
-download/
-ext/
-files/
-install_old/
-language/
-store/
 .htaccess
+/adm/*
+/bin/*
+/cache/*
+/config/*
+/config*.php
+/download/*
+/ext/*
+/files/*
+/install_old/*
+/install/schemas/schema.json
+/language/*
+/store/*
+/images/avatars/gallery/*
+/images/avatars/upload/*
+/images/ranks/*
