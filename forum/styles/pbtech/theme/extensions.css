@@ -193,6 +193,7 @@ h2.pages-title {
   padding-top: 30px;
   height: 0;
   overflow: hidden;
+  clear: both;
 }
  
 .responsive-iframe-container iframe,   
@@ -205,6 +206,68 @@ h2.pages-title {
   height: 100%;
   display: block;
   margin: auto;
+}
+
+.legend {
+  list-style: none;
+  padding-bottom: 45px;
+}
+
+.legend li {
+  float: left;
+  margin-right: 10px;
+}
+
+.legend span {
+  border: 1px solid #ccc;
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin: 2px;
+}
+
+.legend .bio {
+  background-color: #125A2F;
+}
+
+.legend .harvester {
+  background-color: #853104;
+}
+
+.legend .ge {
+  background-color: #AD925F;
+}
+
+.legend .integration {
+  background-color: #1B887A;
+}
+
+.legend .it {
+  background-color: #182C57;
+}
+
+.legend .managerial {
+  background-color: #B1365F;
+}
+
+.legend .nuleaf {
+  background-color: #993304;
+}
+
+.legend .patent {
+  background-color: #2F6309;
+}
+
+.legend .photo {
+  background-color: #23164E;
+}
+
+.legend .mesh {
+  background-color: #5F6B02;
+}
+
+.legend .structural {
+  background-color: #B1440E;
 }
 
 /* Pages - Awards
