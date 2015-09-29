@@ -61,6 +61,69 @@
 	margin-left: 2px;
 }
 
+/* Newsfeed
+--------------------------------------------- */
+#newsfeed {
+	border-top: 1px solid #444;
+}
+
+#newsfeed ul {
+	list-style: none;
+}
+
+#newsfeed li.row {
+	border-top: none;
+	border-bottom-color: #222;
+	transition: background 0.15s ease-in-out 0s;
+}
+
+#newsfeed li.row dl {
+	padding: 9px 5px 13px 0;
+}
+
+#newsfeed li.row dl:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+#newsfeed a.topictitle {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 1px;
+}
+
+#newsfeed a.forum-link {
+	color: #877b69;
+	font-size: 10px;
+}
+
+#newsfeed a:hover {
+	color: #FFF !important;
+	text-decoration: none;
+}
+
+#newsfeed dd.lastpost {
+	bottom: 3px;
+	right: 5px;
+	min-height: inherit;
+}
+
+#newsfeed dd.status-icons {
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	min-height: inherit;
+}
+
+#newsfeed dd.status-icons > a,
+#newsfeed dd.status-icons > span {
+	float: right;
+	margin-left: 2px;
+}
+
 /* Breadcrumb Menu
 --------------------------------------------- */
 #breadcrumb-menu .dropdown .pointer {
@@ -195,9 +258,9 @@ h2.pages-title {
   overflow: hidden;
   clear: both;
 }
- 
-.responsive-iframe-container iframe,   
-.vresponsive-iframe-container object,  
+
+.responsive-iframe-container iframe,
+.vresponsive-iframe-container object,
 .vresponsive-iframe-container embed {
   position: absolute;
   top: 0;
@@ -659,6 +722,33 @@ div.avatarMessage {
 }
 
 #recent-topics a.forum-link:hover {
+	color: #333 !important;
+}
+
+/* Newsfeed
+--------------------------------------------- */
+#newsfeed {
+	border-top-color: #b5b3b2;
+}
+
+#newsfeed li.row {
+	background: none;
+	border-bottom-color: #C2C1C1;
+}
+
+#newsfeed a.topictitle {
+	color: #074e79;
+}
+
+#newsfeed a:hover {
+	color: #0295ee !important;
+}
+
+#newsfeed a.forum-link {
+	color: #5d5d5d;
+}
+
+#newsfeed a.forum-link:hover {
 	color: #333 !important;
 }
 

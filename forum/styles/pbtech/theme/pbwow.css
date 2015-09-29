@@ -509,6 +509,15 @@ hr {
 	width: auto;
 	line-height: normal;
 }
+#newsfeed dd.lastpost {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: #4A4A4A;
+	width: auto;
+	line-height: normal;
+}
 
 .forum-blocks dd.mcp-status {
 	bottom: auto;

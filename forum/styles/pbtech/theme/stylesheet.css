@@ -251,6 +251,9 @@ hr {
 #recent-topics dd.lastpost {
 	color: black;
 }
+#newsfeed dd.lastpost {
+	color: black;
+}
 
 /* Hover states */
 .forum-blocks dl:hover {
