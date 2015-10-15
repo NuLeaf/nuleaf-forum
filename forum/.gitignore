@@ -80,6 +80,7 @@ sftp-config.json
 /config*.php
 /download/*
 /ext/*
+!/ext/nuleaf/
 /files/*
 /install_old/*
 /install/schemas/schema.json
