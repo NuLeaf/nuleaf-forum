@@ -1,0 +1,66 @@
+<a id="newsfeed"></a>
+<div id="newsfeed-box" class="collapse-box">
+	<h2 class="open">{L_NEWSFEED}</h2>
+	<div id="newsfeed">
+
+<!-- BEGIN newsfeed -->
+	<!-- IF not newsfeed.S_TOPIC_TYPE_SWITCH and not newsfeed.S_FIRST_ROW -->
+	</ul>
+	<!-- ENDIF -->
+
+	<!-- IF newsfeed.S_FIRST_ROW or not newsfeed.S_TOPIC_TYPE_SWITCH -->
+	<ul>
+	<!-- ENDIF -->
+		<li class="row<!-- IF newsfeed.S_POST_GLOBAL --> global-announce<!-- ENDIF --><!-- IF newsfeed.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF newsfeed.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF newsfeed.S_TOPIC_REPORTED --> reported<!-- ENDIF -->">
+			<dl class="icon {newsfeed.TOPIC_IMG_STYLE}">
+				<dt<!-- IF newsfeed.TOPIC_ICON_IMG and S_TOPIC_ICONS --> style="background-image: url({T_ICONS_PATH}{newsfeed.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF --> title="{newsfeed.TOPIC_FOLDER_IMG_ALT}">
+					<!-- IF newsfeed.S_UNREAD_TOPIC and not S_IS_BOT --><a href="{newsfeed.U_NEWEST_POST}" class="icon-link"></a><!-- ENDIF -->
+					<div class="list-inner">
+						<!-- EVENT topiclist_row_prepend -->
+						<!-- IF newsfeed.S_UNREAD_TOPIC and not S_IS_BOT --><!-- ENDIF --><a href="{newsfeed.U_VIEW_TOPIC}" class="topictitle"<!-- IF newsfeed.TOPIC_AUTHOR_COLOUR --> style="color:black"<!-- ENDIF -->>{newsfeed.TOPIC_TITLE}</a>
+
+						<div class="forum-links">
+							<!-- IF newsfeed.S_HAS_POLL -->{POLL_IMG} <!-- ENDIF -->
+							<!-- IF newsfeed.S_POST_GLOBAL and FORUM_ID != newsfeed.FORUM_ID -->
+								<a href="{newsfeed.U_VIEW_FORUM}">{newsfeed.FORUM_NAME}</a>
+							<!-- ELSEIF newsfeed.U_VIEW_FORUM and newsfeed.FORUM_NAME -->
+								<!-- BEGIN parent_forums --><a class="forum-link" href="{newsfeed.parent_forums.U_VIEW_FORUM}">{newsfeed.parent_forums.FORUM_NAME}</a> &raquo; <!-- END parent_forums --><a class="forum-link" href="{newsfeed.U_VIEW_FORUM}">{newsfeed.FORUM_NAME}</a>
+							<!-- ENDIF -->
+						</div>
+
+						<!-- EVENT topiclist_row_append -->
+					</div>
+				</dt>
+				<!-- IF not S_IS_BOT -->
+				<dd class="lastpost"><!-- IF NF_SORT_START_TIME -->{newsfeed.FIRST_POST_TIME}<!-- ELSE -->{newsfeed.LAST_POST_TIME}<!-- ENDIF --> <a href="{newsfeed.U_LAST_POST}" title="{L_GOTO_LAST_POST}">{LAST_POST_IMG}</a></dd>
+				<!-- ENDIF -->
+				<dd class="status-icons">
+					<!-- IF newsfeed.S_TOPIC_UNAPPROVED or newsfeed.S_POSTS_UNAPPROVED --><a href="{newsfeed.U_MCP_QUEUE}">{newsfeed.UNAPPROVED_IMG}</a><!-- ENDIF -->
+					<!-- IF newsfeed.S_TOPIC_DELETED --><a href="{newsfeed.U_MCP_QUEUE}">{newsfeed.DELETED_IMG}</a><!-- ENDIF -->
+					<!-- IF newsfeed.S_TOPIC_REPORTED --><a href="{newsfeed.U_MCP_REPORT}">{newsfeed.REPORTED_IMG}</a><!-- ENDIF -->
+					<!-- IF newsfeed.ATTACH_ICON_IMG -->{newsfeed.ATTACH_ICON_IMG}<!-- ENDIF -->
+				</dd>
+
+			</dl>
+		</li>
+	<!-- IF newsfeed.S_LAST_ROW -->
+	</ul>
+	<!-- ENDIF -->
+<!-- BEGINELSE -->
+	<div class="panel">
+		<div class="inner">
+		<strong>{L_NF_NO_TOPICS}</strong>
+		</div>
+	</div>
+<!-- END newsfeed -->
+
+	<!-- IF .nf_pagination -->
+	<div class="action-bar">
+		<div class="pagination">
+			<!-- INCLUDE nf_pagination.html -->
+		</div>
+	</div>
+	<!-- ENDIF -->
+
+	</div>
+</div>

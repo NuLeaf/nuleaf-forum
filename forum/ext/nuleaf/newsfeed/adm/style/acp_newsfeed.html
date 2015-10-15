@@ -1,0 +1,69 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_NEWSFEED}</h1>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+	<fieldset>
+		<dl>
+			<dt><label for="nf_number">{L_NF_NUMBER}{L_COLON}</label><br /><span>{L_NF_NUMBER_EXP}</span></dt>
+			<dd><input type="number" id="nf_number" name="nf_number" size="3" min="0" max="999" value="{NF_NUMBER}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="nf_page_number">{L_NF_PAGE_NUMBER}{L_COLON}</label><br /><span>{L_NF_PAGE_NUMBER_EXP}</span></dt>
+			<dd><input type="number" id="nf_page_number" name="nf_page_number" size="3" min="0" max="999" value="{NF_PAGE_NUMBER}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="nf_parents">{L_NF_PARENTS}{L_COLON}</label><br /><span>{L_NF_PARENTS_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="nf_parents" value="1" id="nf_parents"<!-- IF NF_PARENTS --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="nf_parents" value="0"<!-- IF not NF_PARENTS --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="nf_unreadonly">{L_NF_UNREADONLY}{L_COLON}</label><br /><span>{L_NF_UNREADONLY_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="nf_unreadonly" value="1" id="nf_unreadonly"<!-- IF NF_UNREADONLY --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="nf_unreadonly" value="0"<!-- IF not NF_UNREADONLY --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="nf_sort_start_time">{L_NF_PERSISTENT_DISPLAY}{L_COLON}</label><br /><span>{L_NF_PERSISTENT_DISPLAY_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="nf_persistent_display" value="1" id="nf_persistent_display"<!-- IF NF_PERSISTENT_DISPLAY --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="nf_persistent_display" value="0"<!-- IF not NF_PERSISTENT_DISPLAY --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="nf_topics_to_display">{L_NF_TOPICS_TO_DISPLAY}{L_COLON}</label><br /><span>{L_NF_TOPICS_TO_DISPLAY_EXP}</span></dt>
+			<dd>
+				<select class="select" name="nf_topics_to_display[]" id="nf_topics_to_display" multiple>
+					<option value="nf_topics_in_announcements" <!-- IF NF_TOPICS_IN_ANNOUNCEMENTS --> selected<!-- ENDIF --> />{L_NF_TOPICS_IN_ANNOUNCEMENTS}</option>
+					<option value="nf_topics_by_user" <!-- IF NF_TOPICS_BY_USER --> selected<!-- ENDIF --> />{L_NF_TOPICS_BY_USER}</option>
+					<option value="nf_topics_responded_by_user" <!-- IF NF_TOPICS_RESPONDED_BY_USER --> selected<!-- ENDIF --> />{L_NF_TOPICS_RESPONDED_BY_USER}</option>
+					<option value="nf_topics_by_user_team" <!-- IF NF_TOPICS_BY_USER_TEAM --> selected<!-- ENDIF --> />{L_NF_TOPICS_BY_USER_TEAM}</option>
+					<option value="nf_topics_in_user_most_active_forum" <!-- IF NF_TOPICS_IN_USER_MOST_ACTIVE_FORUM --> selected<!-- ENDIF --> />{L_NF_TOPICS_IN_USER_MOST_ACTIVE_FORUM}</option>
+
+				</select>
+			</dd>
+		</dl>
+	</fieldset>
+	<fieldset>
+		<legend>{L_NF_VIEW_ON}</legend>
+		<dl>
+			<dt><label for="nf_index">{L_INDEX}</label></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="nf_index" value="1" id="nf_index"<!-- IF NF_INDEX --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="nf_index" value="0" <!-- IF not NF_INDEX --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+		</dl>
+	</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

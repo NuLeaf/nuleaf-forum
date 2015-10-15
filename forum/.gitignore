@@ -81,6 +81,7 @@ sftp-config.json
 /download/*
 /ext/*
 !/ext/nuleaf/
+!/ext/paybas/
 /files/*
 /install_old/*
 /install/schemas/schema.json

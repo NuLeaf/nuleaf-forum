@@ -1,0 +1,24 @@
+services:
+    nuleaf.newsfeed.functions:
+        class: nuleaf\newsfeed\core\newsfeed
+        arguments:
+            - @auth
+            - @cache
+            - @config
+            - @content.visibility
+            - @dbal.conn
+            - @dispatcher
+            - @pagination
+            - @request
+            - @template
+            - @user
+            - %core.root_path%
+            - %core.php_ext%
+    nuleaf.newsfeed.listener:
+        class: nuleaf\newsfeed\event\listener
+        arguments:
+            - @nuleaf.newsfeed.functions
+            - @config
+            - @request
+        tags:
+            - { name: event.listener }
