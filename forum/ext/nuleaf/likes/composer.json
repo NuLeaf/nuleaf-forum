@@ -1,0 +1,27 @@
+{
+  "name": "nuleaf/likes",
+  "type": "phpbb-extension",
+  "description": "NuLeaf Likes Extension for phpBB 3.1",
+  "homepage": "https://github.com/NuLeaf/nuleaf-forum/tree/master/forum/ext/nuleaf",
+  "version": "0.0.2",
+  "time": "2015-11-02",
+  "license": "GPL-2.0",
+  "authors": [{
+      "name": "Tuan Pham",
+      "email": "tt.pham1991+git@gmail.com",
+      "homepage": "https://github.com/tuan91187dsf",
+      "role": "Lead Developer"
+    }],
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "require-dev": {
+    "phpbb/epv": "dev-master"
+  },
+  "extra": {
+    "display-name": "NuLeaf Likes",
+    "soft-require": {
+      "phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+    }
+  }
+}

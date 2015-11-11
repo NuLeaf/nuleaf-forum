@@ -1,0 +1,27 @@
+services:
+  nuleaf.likes.listener:
+    class: nuleaf\likes\event\main_listener
+    arguments:
+      - @config
+      - @controller.helper
+      - @nuleaf.likes.likes_manager
+      - @template
+      - @user
+    tags:
+      - { name: event.listener }
+
+  nuleaf.likes.controller:
+    class: nuleaf\likes\controller\main
+    arguments:
+      - @auth
+      - @dbal.conn.driver
+      - @nuleaf.likes.likes_manager
+      - @user
+      - @request
+
+  nuleaf.likes.likes_manager:
+    class: nuleaf\likes\service\likes_manager
+    arguments:
+      - @dbal.conn.driver
+      - @user
+      - %core.table_prefix%

@@ -515,6 +515,15 @@ class newsfeed
 		}
 		else
 		{
+			/**
+			* Event to modify the SQL query before the allowed topics list data is retrieved
+			*
+			* @event nuleaf.newsfeed.sql_pull_topics_list
+			* @var    array    sql_array        The SQL array
+			*/
+			$vars = array('sql_array');
+			extract($this->dispatcher->trigger_event('nuleaf.newsfeed.sql_pull_topics_list', compact($vars)));
+
 			$sql = $this->db->sql_build_query('SELECT', $sql_array);
 			$result = $this->db->sql_query_limit($sql, $total_limit);
 
@@ -628,12 +637,23 @@ class newsfeed
 			return;
 		}
 
+		/**
+		* Event to modify the topics list data before we start the display loop
+		*
+		* @event nuleaf.newsfeed.modify_topics_list
+		* @var    array    topic_list        Array of all the topic IDs
+		* @var    array    rowset            The full topics list array
+		*/
+		$vars = array('topic_list', 'rowset');
+		extract($this->dispatcher->trigger_event('nuleaf.newsfeed.modify_topics_list', compact($vars)));
+
 		foreach ($rowset as $row)
 		{
 			$topic_id = $row['topic_id'];
 			$forum_id = $row['forum_id'];
 
 			$s_type_switch_test = ($row['topic_type'] == POST_ANNOUNCE || $row['topic_type'] == POST_GLOBAL) ? 1 : 0;
+			//$replies = ($this->auth->acl_get('m_approve', $forum_id)) ? $row['topic_replies_real'] : $row['topic_replies'];
 			$replies = $this->content_visibility->get_count('topic_posts', $row, $forum_id) - 1;
 
 			if ($unread_only)
@@ -721,6 +741,16 @@ class newsfeed
 				'U_MCP_REPORT'            => append_sid("{$this->root_path}mcp.$this->phpEx", 'i=reports&amp;mode=reports&amp;f=' . $forum_id . '&amp;t=' . $topic_id, true, $this->user->session_id),
 				'U_MCP_QUEUE'             => $u_mcp_queue,
 			);
+
+			/**
+			* Modify the topic data before it is assigned to the template
+			*
+			* @event nuleaf.newsfeed.modify_tpl_ary
+			* @var    array    row            Array with topic data
+			* @var    array    tpl_ary        Template block array with topic data
+			*/
+			$vars = array('row', 'tpl_ary');
+			extract($this->dispatcher->trigger_event('nuleaf.newsfeed.modify_tpl_ary', compact($vars)));
 
 			$this->template->assign_block_vars($tpl_loopname, $tpl_ary);
 

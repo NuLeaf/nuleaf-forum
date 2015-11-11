@@ -1,0 +1,4 @@
+nuleaf_likes_controller:
+  pattern: /like_post/{post_id}
+  defaults: { _controller: nuleaf.likes.controller:like_post }
+  methods: [POST]

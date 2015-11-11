@@ -1,0 +1,22 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_LIKES}</h1>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+  <fieldset>
+    <dl>
+      <dt><label for="likes_on">{L_LIKES_ON}{L_COLON}</label><br /><span>{L_LIKES_ON_EXP}</span></dt>
+      <dd><input type="radio" class="radio" name="likes_on" value="1" <!-- IF LIKES_ON -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+      <input type="radio" class="radio" name="likes_on" value="0" <!-- IF not LIKES_ON -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+    </dl>
+  </fieldset>
+  <fieldset>
+    <legend>{L_ACP_SUBMIT_CHANGES}</legend>
+    <p class="submit-buttons">
+      <input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+      <input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+    </p>
+    {S_FORM_TOKEN}
+  </fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

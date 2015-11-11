@@ -1,0 +1,4 @@
+<li>
+  <span id="likes-count-{postrow.POST_ID}" class="likes-count">{postrow.LIKES_COUNT}</span>
+  <a href="#{postrow.U_LIKES}" onClick="like({postrow.POST_ID}); return false;" title="<!-- IF postrow.LIKED -->{L_UNLIKE_POST}<!-- ELSE -->{L_LIKE_POST}<!-- ENDIF -->" class="button icon-button like-icon<!-- IF postrow.LIKED --> unlike<!-- ENDIF -->" data-ajax="true"><span><!-- IF postrow.LIKED -->{L_UNLIKE_BUTTON}<!-- ELSE -->{L_LIKE_BUTTON}<!-- ENDIF --></span></a>
+</li>

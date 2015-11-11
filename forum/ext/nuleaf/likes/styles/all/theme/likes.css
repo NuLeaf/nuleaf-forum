@@ -1,0 +1,12 @@
+.like-icon:before { content: "\f06c"; color: #009343; }
+.unlike:before { color: #A90003; }
+
+.like-icon
+{
+  padding-left: 1px !important;
+}
+
+.likes-count
+{
+  font-weight: bold;
+}
